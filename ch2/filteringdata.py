@@ -64,4 +64,4 @@ def recommend(username, users):
 # examples - uncomment to run
 
 print( recommend('Hailey', users))
-#print( recommend('Chan', users))
+print( recommend('Chan', users))

@@ -1,46 +1,44 @@
-import codecs 
+import codecs
 from math import sqrt
 
 users = {"Angelica": {"Blues Traveler": 3.5, "Broken Bells": 2.0,
                       "Norah Jones": 4.5, "Phoenix": 5.0,
                       "Slightly Stoopid": 1.5,
                       "The Strokes": 2.5, "Vampire Weekend": 2.0},
-         
-         "Bill":{"Blues Traveler": 2.0, "Broken Bells": 3.5,
-                 "Deadmau5": 4.0, "Phoenix": 2.0,
-                 "Slightly Stoopid": 3.5, "Vampire Weekend": 3.0},
-         
+
+         "Bill": {"Blues Traveler": 2.0, "Broken Bells": 3.5,
+                  "Deadmau5": 4.0, "Phoenix": 2.0,
+                  "Slightly Stoopid": 3.5, "Vampire Weekend": 3.0},
+
          "Chan": {"Blues Traveler": 5.0, "Broken Bells": 1.0,
                   "Deadmau5": 1.0, "Norah Jones": 3.0, "Phoenix": 5,
                   "Slightly Stoopid": 1.0},
-         
+
          "Dan": {"Blues Traveler": 3.0, "Broken Bells": 4.0,
                  "Deadmau5": 4.5, "Phoenix": 3.0,
                  "Slightly Stoopid": 4.5, "The Strokes": 4.0,
                  "Vampire Weekend": 2.0},
-         
+
          "Hailey": {"Broken Bells": 4.0, "Deadmau5": 1.0,
                     "Norah Jones": 4.0, "The Strokes": 4.0,
                     "Vampire Weekend": 1.0},
-         
-         "Jordyn":  {"Broken Bells": 4.5, "Deadmau5": 4.0,
-                     "Norah Jones": 5.0, "Phoenix": 5.0,
-                     "Slightly Stoopid": 4.5, "The Strokes": 4.0,
-                     "Vampire Weekend": 4.0},
-         
+
+         "Jordyn": {"Broken Bells": 4.5, "Deadmau5": 4.0,
+                    "Norah Jones": 5.0, "Phoenix": 5.0,
+                    "Slightly Stoopid": 4.5, "The Strokes": 4.0,
+                    "Vampire Weekend": 4.0},
+
          "Sam": {"Blues Traveler": 5.0, "Broken Bells": 2.0,
                  "Norah Jones": 3.0, "Phoenix": 5.0,
                  "Slightly Stoopid": 4.0, "The Strokes": 5.0},
-         
+
          "Veronica": {"Blues Traveler": 3.0, "Norah Jones": 5.0,
                       "Phoenix": 4.0, "Slightly Stoopid": 2.5,
                       "The Strokes": 3.0}
-        }
-
+         }
 
 
 class recommender:
-
     def __init__(self, data, k=1, metric='pearson', n=5):
         """ initialize recommender
         currently, if data is dictionary the recommender is initialized
@@ -71,7 +69,6 @@ class recommender:
         else:
             return id
 
-
     def userRatings(self, id, n):
         """Return n top ratings for user with id"""
         print ("Ratings for " + self.userid2name[id])
@@ -82,13 +79,10 @@ class recommender:
                    for (k, v) in ratings]
         # finally sort and return
         ratings.sort(key=lambda artistTuple: artistTuple[1],
-                     reverse = True)
+                     reverse=True)
         ratings = ratings[:n]
         for rating in ratings:
             print("%s\t%i" % (rating[0], rating[1]))
-        
-
-        
 
     def loadBookDB(self, path=''):
         """loads the BX book dataset. Path is where the BX files are
@@ -98,65 +92,56 @@ class recommender:
         #
         # First load book ratings into self.data
         #
-        f = codecs.open(path + "BX-Book-Ratings.csv", 'r', 'utf8')
+        f = codecs.open(path + "kitchen-ratings.csv", 'r', 'utf8')
         for line in f:
             i += 1
-            #separate line into fields
-            fields = line.split(';')
-            user = fields[0].strip('"')
-            book = fields[1].strip('"')
+            # separate line into fields
+            fields = line.split(',')
+            uid = fields[0].strip('"')
+            kit_id = fields[1].strip('"')
             rating = int(fields[2].strip().strip('"'))
-            if user in self.data:
-                currentRatings = self.data[user]
+            if uid in self.data:
+                currentRatings = self.data[uid]
             else:
                 currentRatings = {}
-            currentRatings[book] = rating
-            self.data[user] = currentRatings
+
+            currentRatings[kit_id] = rating
+            self.data[uid] = currentRatings
         f.close()
         #
         # Now load books into self.productid2name
         # Books contains isbn, title, and author among other fields
         #
-        f = codecs.open(path + "BX-Books.csv", 'r', 'utf8')
+        f = codecs.open(path + "kitchen.csv", 'r', 'utf8')
         for line in f:
             i += 1
-            #separate line into fields
-            fields = line.split(';')
-            isbn = fields[0].strip('"')
-            title = fields[1].strip('"')
-            author = fields[2].strip().strip('"')
-            title = title + ' by ' + author
-            self.productid2name[isbn] = title
+            # separate line into fields
+            fields = line.split(',')
+            kit_id = fields[0].strip('"')
+            kit_name = fields[1].strip('"')
+            self.productid2name[kit_id] = kit_name
         f.close()
+
+
         #
         #  Now load user info into both self.userid2name and
         #  self.username2id
         #
-        f = codecs.open(path + "BX-Users.csv", 'r', 'utf8')
+        f = codecs.open(path + "users.csv", 'r', 'utf8')
         for line in f:
             i += 1
-            #print(line)
-            #separate line into fields
-            fields = line.split(';')
-            userid = fields[0].strip('"')
-            location = fields[1].strip('"')
-            if len(fields) > 3:
-                age = fields[2].strip().strip('"')
-            else:
-                age = 'NULL'
-            if age != 'NULL':
-                value = location + '  (age: ' + age + ')'
-            else:
-                value = location
-            self.userid2name[userid] = value
-            self.username2id[location] = userid
+            # print(line)
+            # separate line into fields
+            fields = line.split(',')
+            uid = fields[0].strip('"')
+            nickname = fields[1].strip('"')
+            self.userid2name[uid] = nickname
         f.close()
         print(i)
-                
-        
+
     def pearson(self, rating1, rating2):
-        print rating1
-        print rating2
+        # print 'rating1=%s'%rating1
+        # print 'rating2=%s'%rating2
         sum_xy = 0
         sum_x = 0
         sum_y = 0
@@ -168,6 +153,7 @@ class recommender:
                 n += 1
                 x = rating1[key]
                 y = rating2[key]
+                # print 'x=%s,y=%s'%(x,y)
                 sum_xy += x * y
                 sum_x += x
                 sum_y += y
@@ -178,71 +164,107 @@ class recommender:
         # now compute denominator
         denominator = (sqrt(sum_x2 - pow(sum_x, 2) / n)
                        * sqrt(sum_y2 - pow(sum_y, 2) / n))
+
+        # print  'denominator=%s'%denominator
+
         if denominator == 0:
             return 0
         else:
             return (sum_xy - (sum_x * sum_y) / n) / denominator
 
-
     def computeNearestNeighbor(self, username):
         """creates a sorted list of users based on their distance to
         username"""
+
         distances = []
+        # print self.data
         for instance in self.data:
-            if instance != username:
+            if instance != username and username in self.data:
+                # print 'username=%s ,instance=%s'%(username,instance)
                 distance = self.fn(self.data[username],
                                    self.data[instance])
                 distances.append((instance, distance))
         # sort based on distance -- closest first
         distances.sort(key=lambda artistTuple: artistTuple[1],
                        reverse=True)
+
         return distances
 
     def recommend(self, user):
-       """Give list of recommendations"""
-       recommendations = {}
-       # first get list of users  ordered by nearness
-       nearest = self.computeNearestNeighbor(user)
-       #
-       # now get the ratings for the user
-       #
-       userRatings = self.data[user]
-       #
-       # determine the total distance
-       totalDistance = 0.0
-       for i in range(self.k):
-          totalDistance += nearest[i][1]
-       # now iterate through the k nearest neighbors
-       # accumulating their ratings
-       for i in range(self.k):
-          # compute slice of pie 
-          weight = nearest[i][1] / totalDistance
-          # get the name of the person
-          name = nearest[i][0]
-          # get the ratings for this person
-          neighborRatings = self.data[name]
-          # get the name of the person
-          # now find bands neighbor rated that user didn't
-          for artist in neighborRatings:
-             if not artist in userRatings:
-                if artist not in recommendations:
-                   recommendations[artist] = (neighborRatings[artist]
-                                              * weight)
-                else:
-                   recommendations[artist] = (recommendations[artist]
-                                              + neighborRatings[artist]
-                                              * weight)
-       # now make list from dictionary
-       recommendations = list(recommendations.items())
-       recommendations = [(self.convertProductID2name(k), v)
-                          for (k, v) in recommendations]
-       # finally sort and return
-       recommendations.sort(key=lambda artistTuple: artistTuple[1],
-                            reverse = True)
-       # Return the first n items
-       return recommendations[:self.n]
+        """Give list of recommendations"""
+        recommendations = {}
+
+        if user not in self.data:
+            return  recommendations
+        # first get list of users  ordered by nearness
+        nearest = self.computeNearestNeighbor(user)
+        # print 'nearest=%s'%nearest
+        #
+        # now get the ratings for the user
+        #
+        userRatings = self.data[user]
+        #
+        # determine the total distance
+        totalDistance = 0.0
+        for i in range(self.k):
+            totalDistance += nearest[i][1]
+
+        # print 'totalDistance=%s'%totalDistance
+        # now iterate through the k nearest neighbors
+        # accumulating their ratings
+        for i in range(self.k):
+            # compute slice of pie
+            if totalDistance != 0:
+                weight = nearest[i][1] / totalDistance
+            else:
+                weight = 0
+
+            # print 'weight=%s'%weight
+            # get the name of the person
+            name = nearest[i][0]
+            # get the ratings for this person
+            neighborRatings = self.data[name]
+            # print 'neighborRatings=%s'%neighborRatings
+            # print 'userRatings=%s'%userRatings
+            # get the name of the person
+            # now find bands neighbor rated that user didn't
+            for artist in neighborRatings:
+                if not artist in userRatings:
+                    if artist not in recommendations:
+                        recommendations[artist] = (neighborRatings[artist]
+                                                   * weight)
+                    else:
+                        recommendations[artist] = (recommendations[artist]
+                                                   + neighborRatings[artist]
+                                                   * weight)
+        # now make list from dictionary
+        # print 'recommendations=%s'%recommendations.items()
+        #recommendations = list(recommendations.items())
+
+        #recommendations = [(self.convertProductID2name(k), v)
+                           #for (k, v) in recommendations]
+        # finally sort and return
+        #recommendations.sort(key=lambda artistTuple: artistTuple[1],
+                             #reverse=True)
+        # Return the first n items
+        return recommendations
+
+
 
 
 if __name__ == '__main__':
-    r = recommender(users)
-    r.recommend('Jordyn')
+    r = recommender([],6)
+    r.loadBookDB("./online/")
+    #r.loadBookDB("./")
+    # list = r.recommend('210')
+    # print 'list='
+    # print list
+    # print r.userid2name
+    for u in r.userid2name:
+
+        # print u
+        list = r.recommend(u)
+        if list :
+            # print 'uid=%s, list=%s'%(u,list)
+            print '%s' %list
+
