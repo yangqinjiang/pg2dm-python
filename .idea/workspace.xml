@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="746e7e3f-42e8-43d6-8906-9f271d822740" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ch2/filteringdata.py" afterPath="$PROJECT_DIR$/ch2/filteringdata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ch2/cengfan7-recommender.py" afterPath="$PROJECT_DIR$/ch2/cengfan7-recommender.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ch2/recommender.py" afterPath="$PROJECT_DIR$/ch2/recommender.py" />
     </list>
     <ignored path="pg2dm-python.iws" />
@@ -18,8 +19,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pg2dm_python$test.coverage" NAME="test Coverage Results" MODIFIED="1494234665528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ch2" />
-    <SUITE FILE_PATH="coverage/pg2dm_python$recommender.coverage" NAME="recommender Coverage Results" MODIFIED="1494235708124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ch2" />
-    <SUITE FILE_PATH="coverage/pg2dm_python$cengfan7_recommender.coverage" NAME="cengfan7-recommender Coverage Results" MODIFIED="1494241383941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ch2" />
+    <SUITE FILE_PATH="coverage/pg2dm_python$recommender.coverage" NAME="recommender Coverage Results" MODIFIED="1494290795958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ch2" />
+    <SUITE FILE_PATH="coverage/pg2dm_python$cengfan7_recommender.coverage" NAME="cengfan7-recommender Coverage Results" MODIFIED="1494317592787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ch2" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -38,15 +39,42 @@
     <favorites_list name="pg2dm-python" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="cengfan7-recommender.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="cengfan7-recommender.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ch2/cengfan7-recommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="268" column="28" lean-forward="false" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="28" />
+            <state relative-caret-position="185">
+              <caret line="399" column="48" lean-forward="false" selection-start-line="399" selection-start-column="35" selection-end-line="399" selection-end-column="48" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#2535#2701#0" expanded="false" />
+                <element signature="e#2745#3282#0" expanded="false" />
+                <element signature="e#3327#5023#0" expanded="false" />
+                <element signature="e#8138#9023#0" expanded="false" />
+                <element signature="e#9081#9723#0" expanded="false" />
+                <element signature="e#9764#12065#0" expanded="false" />
+                <element signature="e#12104#13530#0" expanded="false" />
+                <marker date="1494317591030" expanded="true" signature="5544:5649" ph="SELECT diner... c_comment" />
+                <marker date="1494317591030" expanded="true" signature="6676:6683" ph="SELECT diner... c_comment" />
+                <marker date="1494317591030" expanded="true" signature="6676:6724" ph="SELECT id ,n... c_kitchen" />
+                <marker date="1494317591030" expanded="true" signature="7519:7560" ph="SELECT d.id,... c_orders" />
+                <marker date="1494317591030" expanded="true" signature="7519:7647" ph="SELECT id ,n... c_kitchen" />
+                <marker date="1494317591030" expanded="true" signature="12340:12396" ph="select uid,k... c_kitchen_recommend" />
+                <marker date="1494317591030" expanded="true" signature="12340:12398" ph="select count... c_kitchen_recommend" />
+                <marker date="1494317591030" expanded="true" signature="12582:12627" ph="insert into c_kitchen_recommend... " />
+                <marker date="1494317591030" expanded="true" signature="13086:13141" ph="update c_kit... " />
+                <marker date="1494317591030" expanded="true" signature="13086:13142" ph="update c_kit... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,10 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>convertProductID2name</find>
-      <find>data</find>
-      <find>fn</find>
-      <find>loadBookDB</find>
       <find>pearson</find>
       <find>person</find>
       <find>sum_x2</find>
@@ -83,7 +107,6 @@
       <find>neighborRatings</find>
       <find>v</find>
       <find>308</find>
-      <find>print</find>
       <find>35236</find>
       <find>self.fn(self.data[username]</find>
       <find>totalDistance += nearest[i][1]</find>
@@ -92,6 +115,11 @@
       <find>377</find>
       <find>11</find>
       <find>pearson(</find>
+      <find>print</find>
+      <find>MySQLdb.connect</find>
+      <find>username2id</find>
+      <find>fetch users</find>
+      <find>host=host, user=user, passwd=passwd, port=port, charset=charset</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,12 +128,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ch2/t.csv" />
         <option value="$PROJECT_DIR$/ch2/kitchen.csv" />
         <option value="$PROJECT_DIR$/ch2/test.py" />
         <option value="$PROJECT_DIR$/ch2/recommender.py" />
         <option value="$PROJECT_DIR$/ch2/cengfan7-recommender.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -123,10 +151,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1592" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -157,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,30 +207,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ch2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pg2dm-python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pg2dm-python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ch2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="online" />
+              <option name="myItemId" value="ch3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -385,6 +395,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -470,29 +486,49 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7082452" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10104167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4143791" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14791666" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="3034" y="232" width="284" height="946" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14791666" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="3034" y="232" width="284" height="946" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -502,23 +538,70 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/ch2/cengfan7-recommender.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#2535#2701#0" expanded="false" />
+            <element signature="e#2745#3282#0" expanded="false" />
+            <element signature="e#3327#5023#0" expanded="false" />
+            <element signature="e#8138#9023#0" expanded="false" />
+            <element signature="e#9081#9723#0" expanded="false" />
+            <element signature="e#9764#12065#0" expanded="false" />
+            <element signature="e#12104#13530#0" expanded="false" />
+            <marker date="1494317591030" expanded="true" signature="5544:5649" ph="SELECT diner... c_comment" />
+            <marker date="1494317591030" expanded="true" signature="6676:6683" ph="SELECT diner... c_comment" />
+            <marker date="1494317591030" expanded="true" signature="6676:6724" ph="SELECT id ,n... c_kitchen" />
+            <marker date="1494317591030" expanded="true" signature="7519:7560" ph="SELECT d.id,... c_orders" />
+            <marker date="1494317591030" expanded="true" signature="7519:7647" ph="SELECT id ,n... c_kitchen" />
+            <marker date="1494317591030" expanded="true" signature="12340:12396" ph="select uid,k... c_kitchen_recommend" />
+            <marker date="1494317591030" expanded="true" signature="12340:12398" ph="select count... c_kitchen_recommend" />
+            <marker date="1494317591030" expanded="true" signature="12582:12627" ph="insert into c_kitchen_recommend... " />
+            <marker date="1494317591030" expanded="true" signature="13086:13141" ph="update c_kit... " />
+            <marker date="1494317591030" expanded="true" signature="13086:13142" ph="update c_kit... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch2/kitchen-ratings.csv">
+    <entry file="file://$PROJECT_DIR$/ch2/online/kitchen-ratings.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="185" column="14" lean-forward="false" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="14" />
+        <state relative-caret-position="341640">
+          <caret line="9490" column="13" lean-forward="false" selection-start-line="9490" selection-start-column="13" selection-end-line="9490" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch2/cengfan7-recommender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#2535#2701#0" expanded="false" />
+            <element signature="e#2745#3282#0" expanded="false" />
+            <element signature="e#3327#5023#0" expanded="false" />
+            <element signature="e#8138#9023#0" expanded="false" />
+            <element signature="e#9081#9723#0" expanded="false" />
+            <element signature="e#9764#12065#0" expanded="false" />
+            <element signature="e#12104#13530#0" expanded="false" />
+            <marker date="1494317591030" expanded="true" signature="5544:5649" ph="SELECT diner... c_comment" />
+            <marker date="1494317591030" expanded="true" signature="6676:6683" ph="SELECT diner... c_comment" />
+            <marker date="1494317591030" expanded="true" signature="6676:6724" ph="SELECT id ,n... c_kitchen" />
+            <marker date="1494317591030" expanded="true" signature="7519:7560" ph="SELECT d.id,... c_orders" />
+            <marker date="1494317591030" expanded="true" signature="7519:7647" ph="SELECT id ,n... c_kitchen" />
+            <marker date="1494317591030" expanded="true" signature="12340:12396" ph="select uid,k... c_kitchen_recommend" />
+            <marker date="1494317591030" expanded="true" signature="12340:12398" ph="select count... c_kitchen_recommend" />
+            <marker date="1494317591030" expanded="true" signature="12582:12627" ph="insert into c_kitchen_recommend... " />
+            <marker date="1494317591030" expanded="true" signature="13086:13141" ph="update c_kit... " />
+            <marker date="1494317591030" expanded="true" signature="13086:13142" ph="update c_kit... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -526,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -542,15 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="57" column="35" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="57" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch2/online/kitchen-ratings.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="6738" column="12" lean-forward="false" selection-start-line="6738" selection-start-column="7" selection-end-line="6738" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -558,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="5996" column="6" lean-forward="false" selection-start-line="5996" selection-start-column="1" selection-end-line="5996" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -566,17 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch2/recommender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="156" column="22" lean-forward="false" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,20 +644,99 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch2/recommender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="246" column="25" lean-forward="false" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch2/online/kitchen-ratings.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341640">
+          <caret line="9490" column="13" lean-forward="false" selection-start-line="9490" selection-start-column="13" selection-end-line="9490" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/MySQLdb/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="163" column="8" lean-forward="false" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch3/recommender3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7848">
+          <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
           <folding>
-            <element signature="e#1385#1821#0" expanded="false" />
-            <element signature="e#1873#2214#0" expanded="false" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch3/cosineSimilarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch2/kitchen-ratings.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5040">
+          <caret line="185" column="14" lean-forward="false" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/MySQLdb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ch2/cengfan7-recommender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="268" column="28" lean-forward="false" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="28" />
+        <state relative-caret-position="185">
+          <caret line="399" column="48" lean-forward="false" selection-start-line="399" selection-start-column="35" selection-end-line="399" selection-end-column="48" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#2535#2701#0" expanded="false" />
+            <element signature="e#2745#3282#0" expanded="false" />
+            <element signature="e#3327#5023#0" expanded="false" />
+            <element signature="e#8138#9023#0" expanded="false" />
+            <element signature="e#9081#9723#0" expanded="false" />
+            <element signature="e#9764#12065#0" expanded="false" />
+            <element signature="e#12104#13530#0" expanded="false" />
+            <marker date="1494317591030" expanded="true" signature="5544:5649" ph="SELECT diner... c_comment" />
+            <marker date="1494317591030" expanded="true" signature="6676:6683" ph="SELECT diner... c_comment" />
+            <marker date="1494317591030" expanded="true" signature="6676:6724" ph="SELECT id ,n... c_kitchen" />
+            <marker date="1494317591030" expanded="true" signature="7519:7560" ph="SELECT d.id,... c_orders" />
+            <marker date="1494317591030" expanded="true" signature="7519:7647" ph="SELECT id ,n... c_kitchen" />
+            <marker date="1494317591030" expanded="true" signature="12340:12396" ph="select uid,k... c_kitchen_recommend" />
+            <marker date="1494317591030" expanded="true" signature="12340:12398" ph="select count... c_kitchen_recommend" />
+            <marker date="1494317591030" expanded="true" signature="12582:12627" ph="insert into c_kitchen_recommend... " />
+            <marker date="1494317591030" expanded="true" signature="13086:13141" ph="update c_kit... " />
+            <marker date="1494317591030" expanded="true" signature="13086:13142" ph="update c_kit... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

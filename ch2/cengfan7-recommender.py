@@ -1,4 +1,5 @@
 import codecs
+import MySQLdb
 from math import sqrt
 
 users = {"Angelica": {"Blues Traveler": 3.5, "Broken Bells": 2.0,
@@ -139,6 +140,97 @@ class recommender:
         f.close()
         print(i)
 
+
+    def loadBookDB2(self, db_name,host='',user='',passwd='',port=3306,charset='utf8'):
+        """loads the BX book dataset. Path is where the BX files are
+        located"""
+        self.data = {}
+
+
+
+        print 'fetch rating ......'
+        #
+        # ratings
+        #
+        try:
+            conn = MySQLdb.connect(host=host, user=user, passwd=passwd, port=port, charset=charset)
+            cur = conn.cursor()
+            conn.select_db(db_name)
+            #kitchen-ratings
+            count = cur.execute("SELECT diners_id,kit_id,ROUND(AVG(score),1) from c_comment WHERE order_id != 0  GROUP BY diners_id,kit_id ;");
+            print 'there has %s rows record '%count
+            results = cur.fetchall()
+            for r in results:
+                # print 'uid=%s kit_id=%s  score=%s'%(r)
+                uid = r[0]
+                kit_id= r[1]
+                rating = r[2]
+                if uid in self.data:
+                    currentRatings = self.data[uid]
+                else:
+                    currentRatings = {}
+
+                currentRatings[kit_id] = float(rating)
+                self.data[uid] = currentRatings
+
+            # print self.data
+            cur.close()
+            conn.close()
+        except MySQLdb.Error, e:
+            print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+
+
+
+        print 'fetch kitchen ......'
+        # kitchen
+        self.productid2name = {}
+        try:
+            conn = MySQLdb.connect(host=host, user=user, passwd=passwd, port=port, charset=charset)
+            cur = conn.cursor()
+            conn.select_db(db_name)
+            # kitchen
+            count = cur.execute("SELECT id ,name FROM c_kitchen WHERE onshelf = 1;")
+            print 'there has %s rows record ' % count
+            kit_results = cur.fetchall()
+            for r in kit_results:
+                # print 'kit_id=%s  kit_name=%s'%(r)
+
+                kit_id = r[0]
+                kit_name = r[1]
+                self.productid2name[kit_id] = kit_name
+
+            # print self.productid2name
+            cur.close()
+            conn.close()
+        except MySQLdb.Error, e:
+            print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+
+
+        #users
+        print 'fetch users ......'
+        # users
+        try:
+            conn = MySQLdb.connect(host=host, user=user, passwd=passwd, port=port, charset=charset)
+            cur = conn.cursor()
+            conn.select_db(db_name)
+            # kitchen
+            count = cur.execute("SELECT d.id,d.nickname from c_orders as o INNER JOIN c_diners as d ON o.diners_id = d.id WHERE o.payment_status =1 GROUP BY d.id;")
+            print 'there has %s rows record ' % count
+            kit_results = cur.fetchall()
+            for r in kit_results:
+                # print 'uid=%s  kit_name=%s'%(r)
+
+                uid = r[0]
+                nickname = r[1]
+                self.userid2name[uid] = nickname
+
+
+            cur.close()
+            conn.close()
+        except MySQLdb.Error, e:
+            print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+
+
     def pearson(self, rating1, rating2):
         # print 'rating1=%s'%rating1
         # print 'rating2=%s'%rating2
@@ -249,22 +341,77 @@ class recommender:
         # Return the first n items
         return recommendations
 
+    def saveDb(self ,value):
+        try:
+            conn = MySQLdb.connect(host='120.77.249.112', user='root', passwd='7f795ee0da', port=3306)
+            cur = conn.cursor()
+            conn.select_db('test_cengfan7')
+            #check
+            count = cur.execute('select uid,kit_ids from c_kitchen_recommend WHERE uid = %s'%value[0])
 
+            print  count
+            if count == 0:
+
+                print 'add doing...'
+                #add
+                # add
+                add_ok = cur.execute('insert into c_kitchen_recommend values(%s,%s)', value)
+                if add_ok:
+                    print 'add ok'
+                    conn.commit()
+                else:
+                    print 'add fail'
+
+                return  0
+
+
+            #update
+            exist = cur.fetchone()
+
+            if  exist[1] == value[1] :
+                print 'next...'
+                return 0
+
+            print 'update doing...'
+
+            if count == 1:
+                #update
+                sql =  'update c_kitchen_recommend set kit_ids="%s"  where uid=%s' % (value[1], value[0])
+                update_ok = cur.execute(sql)
+
+                if update_ok:
+                    print 'update ok'
+                    conn.commit()
+                else:
+                    print 'update fail....'
+
+            cur.close()
+            conn.close()
+
+
+        except MySQLdb.Error, e:
+            print "Mysql Error %d: %s" % (e.args[0], e.args[1])
 
 
 if __name__ == '__main__':
     r = recommender([],6)
-    r.loadBookDB("./online/")
-    #r.loadBookDB("./")
+    #r.loadBookDB("./online/")
+    # r.loadBookDB("./")
+    r.loadBookDB2('test_cengfan7','120.77.249.112','root','7f795ee0da')
+
     # list = r.recommend('210')
     # print 'list='
     # print list
-    # print r.userid2name
+
     for u in r.userid2name:
 
         # print u
         list = r.recommend(u)
         if list :
-            # print 'uid=%s, list=%s'%(u,list)
-            print '%s' %list
+            print 'uid=%s, list=%s'%(u,list)
+            l = list.keys()
+            item = ','.join(str(e) for e in l)
+            print item
+            r.saveDb([u,item])
+            # print '%s' %list
 

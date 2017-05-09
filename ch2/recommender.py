@@ -155,8 +155,8 @@ class recommender:
                 
         
     def pearson(self, rating1, rating2):
-        print rating1
-        print rating2
+        # print rating1
+        # print rating2
         sum_xy = 0
         sum_x = 0
         sum_y = 0
@@ -245,4 +245,5 @@ class recommender:
 
 if __name__ == '__main__':
     r = recommender(users)
-    r.recommend('Jordyn')
+    l = r.recommend('Jordyn')
+    print l
